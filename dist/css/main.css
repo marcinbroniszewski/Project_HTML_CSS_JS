@@ -6,7 +6,10 @@
 
 :root {
   font-size: 62.5%;
-  --primary-color: rgb(158,63,253);
+  --primary-color: rgb(158, 63, 253);
+  --purple-text: rgb(162, 71, 253);
+  --regular-text: rgb(58, 58, 92);
+  --btns-hover-color: rgb(68, 68, 119);
 }
 
 body {
@@ -19,11 +22,31 @@ body {
   margin: 0 auto;
 }
 
+.purple-btn {
+  padding: 0 1.5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.6rem;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.purple-btn:hover {
+  background-color: var(--btns-hover-color);
+}
+
 .nav {
   position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
 }
 .nav .current {
-  color: rgb(162, 71, 253);
+  color: var(--purple-text);
 }
 .nav__container {
   display: grid;
@@ -42,25 +65,24 @@ body {
   transition: transform 0.3s;
 }
 .nav__link {
-  margin-top: 3rem;
-  font-size: 2.2rem;
+  margin-top: 3.5rem;
+  font-size: 2.4rem;
   text-decoration: none;
-  color: rgb(72, 72, 104);
+  color: var(--regular-text);
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: var(--purple-text);
 }
 .nav__company-logo {
   grid-column: 1/2;
+  margin-left: 1rem;
 }
 .nav__btn {
   grid-column: 11/12;
   grid-row: 1/2;
   margin: auto 0;
-  height: 5rem;
-  padding: 1rem 2rem;
-  border-radius: 2.5rem;
-  border: none;
-  background-color: var(--primary-color);
-  color: #ffffff;
-  font-size: 1.6rem;
+  z-index: 999;
 }
 .nav__burger {
   grid-column: 12/13;
@@ -73,21 +95,45 @@ body {
   background-color: #fff;
   z-index: 999;
 }
-.nav .burger-active {
+.nav--active {
   transform: translateX(0);
 }
 
-@media (min-width: 375px) {
-  .nav__company-logo {
-    margin-left: 1rem;
-  }
-  .nav__link {
-    margin-top: 3.5rem;
-    font-size: 2.4rem;
-  }
+.header {
+  position: relative;
+  height: 50%;
 }
+.header__container {
+  position: relative;
+  padding: 11rem 0 5rem;
+  width: 100%;
+}
+.header__title {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.header__text {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--regular-text);
+}
+.header__btn {
+  display: block;
+  margin: 2rem auto 0;
+}
+.header__bg-img {
+  position: relative;
+  width: 100%;
+  height: 18%;
+  background-image: url(../img/bg-small.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
 @media (min-width: 414px) {
-  .nav__btn {
+  .purple-btn {
     font-size: 1.8rem;
   }
   .nav__burger {
@@ -95,6 +141,10 @@ body {
     margin: 0 1rem;
   }
 }
+.header__bg-img {
+  height: 23vh;
+}
+
 @media (min-width: 576px) {
   .nav__company-logo {
     margin-left: 1.5rem;
@@ -103,10 +153,22 @@ body {
     margin-top: 4rem;
     font-size: 3rem;
   }
+  .header__bg-img {
+    height: 26vh;
+  }
 }
 @media (min-width: 640px) {
-  .nav__btn {
+  .purple-btn {
+    padding: 0 2.5rem;
     font-size: 2rem;
+  }
+  .header__bg-img {
+    height: 28vh;
+  }
+}
+@media (min-width: 700px) {
+  .header__bg-img {
+    height: 31vh;
   }
 }
 @media (min-width: 768px) {
@@ -120,6 +182,25 @@ body {
   .nav__burger {
     font-size: 5rem;
     margin: 0 3rem;
+  }
+  .header__bg-img {
+    height: 34vh;
+  }
+}
+@media (min-width: 862px) {
+  .header__bg-img {
+    height: 39vh;
+  }
+}
+@media (min-width: 992px) {
+  .header__bg-img {
+    background-image: url(../img/bg-large.jpg);
+    height: 42vh;
+  }
+}
+@media (min-width: 1065px) {
+  .header__bg-img {
+    height: 48vh;
   }
 }
 @media (min-width: 1200px) {
@@ -142,5 +223,49 @@ body {
   }
   .nav__company-logo {
     margin: 0 2rem;
+  }
+  .header__bg-img {
+    height: 90vh;
+    background-position: left;
+  }
+  .header__container {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    z-index: 10;
+  }
+  .header__title, .header__text {
+    text-align: center;
+  }
+  .header__text {
+    margin: 1rem 0;
+  }
+  .header__btn {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 1300px) {
+  .header__title, .header__text {
+    text-align: left;
+  }
+  .header__btn {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1920px) {
+  .header__container {
+    width: 25%;
+    top: 8%;
+  }
+  .header__title {
+    font-size: 6rem;
+  }
+  .header__text {
+    font-size: 2rem;
+  }
+  .header__bg-img {
+    height: 90vh;
+    background-position: bottom;
   }
 }
