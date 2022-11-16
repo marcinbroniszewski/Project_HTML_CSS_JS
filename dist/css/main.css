@@ -155,14 +155,43 @@ body {
   font-size: 1.6rem;
 }
 .services__container p {
-  margin-bottom: 3rem;
-  margin: 0 1rem 2rem;
+  margin: 0 1.5rem 6rem;
   font-size: 1.4rem;
   color: var(--regular-text);
 }
 .services i {
   font-size: 10rem;
   color: rgb(100, 73, 240);
+}
+
+.aboutus .experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding: 3rem 0;
+  background-color: rgb(22, 22, 63);
+  color: rgb(222, 222, 222);
+  text-align: center;
+}
+.aboutus .experience .fa-circle {
+  font-size: 0.7rem;
+}
+.aboutus .experience__pseudo-header {
+  width: 50%;
+  align-self: center;
+  padding: 2rem 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.aboutus .experience__box {
+  margin: 4rem 0;
+}
+.aboutus .experience__number {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.aboutus .experience__text {
+  font-size: 1.3rem;
 }
 
 @media (min-width: 406px) {
@@ -187,6 +216,15 @@ body {
     margin: 0 auto 4rem;
     font-size: 1.5rem;
   }
+  .aboutus .experience__pseudo-header {
+    font-size: 2.8rem;
+  }
+  .aboutus .experience__number {
+    font-size: 4rem;
+  }
+  .aboutus .experience__text {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 447px) {
   .services__text {
@@ -205,6 +243,14 @@ body {
 @media (min-width: 607px) {
   .header__container {
     top: 35%;
+  }
+  .aboutus .experience__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .aboutus .experience__number {
+    font-size: 4.5rem;
   }
 }
 @media (min-width: 640px) {
@@ -237,6 +283,9 @@ body {
   .header__btn {
     margin-top: 6rem;
   }
+  .aboutus .experience__number {
+    font-size: 6rem;
+  }
 }
 @media (min-width: 992px) {
   .header__bg-img {
@@ -259,6 +308,9 @@ body {
     grid-template-columns: repeat(12, 1fr);
     margin: 0 2rem;
   }
+  .services__text {
+    margin-bottom: 9rem;
+  }
   .services__one {
     grid-column: 1/5;
   }
@@ -271,6 +323,18 @@ body {
   .services__container p {
     width: 80%;
     margin: 2rem auto 6rem;
+  }
+  .aboutus .experience {
+    padding: 6rem 0;
+  }
+  .aboutus .experience__pseudo-header {
+    font-size: 3.2rem;
+  }
+  .aboutus .experience__number {
+    font-size: 6rem;
+  }
+  .aboutus .experience__text {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1014px) {
@@ -307,6 +371,12 @@ body {
   }
   .header__text {
     margin: 1rem 0;
+  }
+  .aboutus .experience {
+    padding: 8rem 0;
+  }
+  .aboutus .experience__number {
+    font-size: 8rem;
   }
 }
 @media (min-width: 1300px) {
@@ -347,6 +417,11 @@ body {
 @media (min-width: 1920px) {
   .nav__company-logo {
     margin-left: 5rem;
+  }
+  .header__container {
+    top: 18%;
+    left: 5%;
+    width: 60%;
   }
   .header__title {
     font-size: 6rem;

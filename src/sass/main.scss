@@ -109,7 +109,6 @@ body {
 // header
 
 .header {
-	
 	&__bg-img {
 		position: relative;
 		height: 45rem;
@@ -129,7 +128,7 @@ body {
 	}
 
 	&__text {
-		margin: .5rem;
+		margin: 0.5rem;
 		text-align: center;
 		font-size: 1.8rem;
 		font-weight: bold;
@@ -173,8 +172,7 @@ body {
 		}
 
 		p {
-			margin-bottom: 3rem;
-			margin: 0 1rem 2rem;
+			margin: 0 1.5rem 6rem;
 			font-size: 1.4rem;
 			color: var(--regular-text);
 		}
@@ -183,6 +181,43 @@ body {
 	i {
 		font-size: 10rem;
 		color: rgb(100, 73, 240);
+	}
+}
+
+// about
+
+.aboutus {
+	.experience {
+		display: flex;
+		flex-direction: column;
+		margin-top: 10rem;
+		padding: 3rem 0;
+		background-color: rgb(22, 22, 63);
+		color: rgb(222, 222, 222);
+		text-align: center;
+
+		.fa-circle {
+			font-size: 0.7rem;
+		}
+
+		&__pseudo-header {
+			width: 50%;
+			align-self: center;
+			padding: 2rem 0;
+			font-size: 2.4rem;
+			font-weight: bold;
+		}
+
+		&__box {
+			margin: 4rem 0;
+		}
+		&__number {
+			font-size: 4rem;
+			font-weight: bold;
+		}
+		&__text {
+			font-size: 1.3rem;
+		}
 	}
 }
 
@@ -197,7 +232,7 @@ body {
 			margin: 0 1rem;
 		}
 	}
-	
+
 	.header {
 		&__container {
 			top: 25%;
@@ -216,7 +251,19 @@ body {
 			font-size: 1.5rem;
 		}
 	}
-
+	.aboutus {
+		.experience {
+			&__pseudo-header {
+				font-size: 2.8rem;
+			}
+			&__number {
+				font-size: 4rem;
+			}
+			&__text {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
 
 @media (min-width: 447px) {
@@ -226,7 +273,6 @@ body {
 		}
 	}
 }
-
 
 @media (min-width: 576px) {
 	.nav {
@@ -243,9 +289,23 @@ body {
 
 @media (min-width: 607px) {
 	.header {
-	&__container {
-		top: 35%;
+		&__container {
+			top: 35%;
+		}
 	}
+
+	.aboutus {
+		.experience {
+			&__container {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+			}
+
+			&__number {
+				font-size: 4.5rem;
+			}
+		}
 	}
 }
 
@@ -254,9 +314,7 @@ body {
 		padding: 0 2.5rem;
 		font-size: 2rem;
 	}
-	
 }
-
 
 @media (min-width: 768px) {
 	.nav {
@@ -276,31 +334,36 @@ body {
 	}
 
 	.header {
+		&__bg-img {
+			height: 55rem;
+		}
+		&__title {
+			font-size: 4rem;
+		}
 
-&__bg-img {
-	height: 55rem;
+		&__text {
+			font-size: 1.9rem;
+		}
+
+		&__btn {
+			margin-top: 6rem;
+		}
+	}
+
+	.aboutus {
+		.experience {
+			&__number {
+				font-size: 6rem;
+			}
+		}
+	}
 }
-	&__title {
-	font-size: 4rem;	
-	}
-	
-	&__text {
-		font-size: 1.9rem;
-	}
-
-	&__btn {
-		margin-top: 6rem;
-	}
-	}
-}
-
 
 @media (min-width: 992px) {
 	.header {
 		&__bg-img {
 			background-image: url(../img/bg-large.jpg);
 		}
-
 
 		&__btn {
 			margin-top: 8rem;
@@ -323,6 +386,10 @@ body {
 			margin: 0 2rem;
 		}
 
+		&__text {
+			margin-bottom: 9rem;
+		}
+
 		&__one {
 			grid-column: 1/5;
 		}
@@ -338,6 +405,20 @@ body {
 		&__container p {
 			width: 80%;
 			margin: 2rem auto 6rem;
+		}
+	}
+	.aboutus {
+		.experience {
+			padding: 6rem 0;
+			&__pseudo-header {
+				font-size: 3.2rem;
+			}
+			&__number {
+				font-size: 6rem;
+			}
+			&__text {
+				font-size: 1.8rem;
+			}
 		}
 	}
 }
@@ -380,11 +461,20 @@ body {
 		&__bg-img {
 			height: 65rem;
 		}
-&__container {
-	top: 30%;
-}
+		&__container {
+			top: 30%;
+		}
 		&__text {
 			margin: 1rem 0;
+		}
+	}
+	.aboutus {
+		.experience {
+			padding: 8rem 0;	
+			&__number {
+				font-size: 8rem;
+			}
+		
 		}
 	}
 }
@@ -403,10 +493,10 @@ body {
 		&__btn {
 			margin-left: 0;
 		}
-&__bg-img {
-		height: 70rem;
-		background-position: bottom;
-}
+		&__bg-img {
+			height: 70rem;
+			background-position: bottom;
+		}
 	}
 }
 
@@ -420,10 +510,10 @@ body {
 			margin-bottom: 8rem;
 		}
 	}
-	
+
 	.header {
 		&__bg-img {
-			height: 80rem;	
+			height: 80rem;
 		}
 
 		&__container {
@@ -443,7 +533,11 @@ body {
 	}
 
 	.header {
-
+		&__container {
+			top: 18%;
+			left: 5%;
+			width: 60%;
+		}
 		&__title {
 			font-size: 6rem;
 		}
